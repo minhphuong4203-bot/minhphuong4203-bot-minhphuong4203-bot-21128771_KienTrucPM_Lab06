@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="133a69d1-fca5-4d71-a437-68e551fd080c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../MicroserviceSharedCommon/.idea/MicroserviceSharedCommon.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/iuh/fit/se/orderservice/configs/RabbitMqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/iuh/fit/se/orderservice/dto/OrderMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-server/rabbitmq-server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SingleTon/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SingleTon/.idea/.gitignore" beforeDir="false" />
@@ -24,159 +28,15 @@
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/SingletonSerializedTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/StaticBlockSingleton.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/ThreadSafeSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/21128771_DangMinhPhuong_KTPM.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/Picture/ReflectionSingletonTest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/Picture/SingletonSerializedTest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/SingleTon.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/filename.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/src/iuh/fit/se/singleton/BillPughSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/src/iuh/fit/se/singleton/EagerInitializedSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/src/iuh/fit/se/singleton/EnumSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/src/iuh/fit/se/singleton/LazyInitializedSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/src/iuh/fit/se/singleton/ReflectionSingletonTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/src/iuh/fit/se/singleton/SerializedSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/src/iuh/fit/se/singleton/SingletonSerializedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/src/iuh/fit/se/singleton/StaticBlockSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleTon/src/iuh/fit/se/singleton/ThreadSafeSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/.idea/Week06.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/src/main/java/iuh/fit/se/apigateway/ApiGatewayApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/src/main/java/iuh/fit/se/apigateway/configs/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/src/main/java/iuh/fit/se/apigateway/filters/JWTGlobalFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/src/test/java/iuh/fit/se/apigateway/ApiGatewayApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/target/surefire-reports/TEST-iuh.fit.se.apigateway.ApiGatewayApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/api-gateway/target/surefire-reports/iuh.fit.se.apigateway.ApiGatewayApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/src/main/java/iuh/fit/se/customerservice/CustomerServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/src/main/java/iuh/fit/se/customerservice/controllers/CustomerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/src/main/java/iuh/fit/se/customerservice/entities/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/src/main/java/iuh/fit/se/customerservice/repositories/CustomerRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/src/main/java/iuh/fit/se/customerservice/services/CustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/src/main/java/iuh/fit/se/customerservice/services/impl/CustomerServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/src/test/java/iuh/fit/se/customerservice/CustomerServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/customer-service/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/eureka-server/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/eureka-server/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/eureka-server/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/eureka-server/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/eureka-server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/eureka-server/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/eureka-server/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/eureka-server/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/eureka-server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/eureka-server/src/main/java/iuh/fit/se/eurekaserver/EurekaServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/eureka-server/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/eureka-server/src/test/java/iuh/fit/se/eurekaserver/EurekaServerApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/eureka-server/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/java/iuh/fit/se/identityservice/IdentityServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/java/iuh/fit/se/identityservice/configs/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/java/iuh/fit/se/identityservice/controllers/AuthenticationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/java/iuh/fit/se/identityservice/dtos/SignInRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/java/iuh/fit/se/identityservice/dtos/SignInResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/java/iuh/fit/se/identityservice/dtos/SignUpRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/java/iuh/fit/se/identityservice/entities/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/java/iuh/fit/se/identityservice/filters/JWTAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/java/iuh/fit/se/identityservice/repositories/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/java/iuh/fit/se/identityservice/services/AuthService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/java/iuh/fit/se/identityservice/services/impl/AuthServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/java/iuh/fit/se/identityservice/services/impl/UserDetailsServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/java/iuh/fit/se/identityservice/utils/JWTUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/src/test/java/iuh/fit/se/identityservice/IdentityServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/identity-service/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/src/main/java/iuh/fit/se/orderservice/OrderServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/src/main/java/iuh/fit/se/orderservice/controllers/OrderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/src/main/java/iuh/fit/se/orderservice/entities/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/src/main/java/iuh/fit/se/orderservice/repositories/OrderRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/src/main/java/iuh/fit/se/orderservice/services/OrderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/src/main/java/iuh/fit/se/orderservice/services/impl/OrderServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/src/main/main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/src/test/java/iuh/fit/se/orderservice/OrderServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/src/test/test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/order-service/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/src/main/java/iuh/fit/se/productservice/ProductServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/src/main/java/iuh/fit/se/productservice/configs/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/src/main/java/iuh/fit/se/productservice/configs/SwaggerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/src/main/java/iuh/fit/se/productservice/controllers/ProductController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/src/main/java/iuh/fit/se/productservice/entities/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/src/main/java/iuh/fit/se/productservice/filters/JWTAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/src/main/java/iuh/fit/se/productservice/repositories/ProductRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/src/main/java/iuh/fit/se/productservice/services/ProductService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/src/main/java/iuh/fit/se/productservice/services/impl/ProductServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week06/product-service/src/test/java/iuh/fit/se/productservice/ProductServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/event_driven_rabbitmq/.idea/event_driven_rabbitmq.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/event_driven_rabbitmq/event_driven_rabbitmq/.idea/event_driven_rabbitmq.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/event_driven_rabbitmq/event_driven_rabbitmq/rabbitmq-server/rabbitmq-server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/iuh/fit/se/orderservice/services/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/iuh/fit/se/orderservice/services/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/target/classes/iuh/fit/se/orderservice/services/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/iuh/fit/se/orderservice/services/impl/OrderServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,6 +61,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ApiGatewayApplication.executor": "Debug",
+    "Docker.rabbitmq-server: Compose Deployment.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -210,13 +71,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ApiGatewayApplication.executor": "Run",
     "Spring Boot.CustomerServiceApplication.executor": "Run",
+    "Spring Boot.EmailServiceApplication.executor": "Run",
     "Spring Boot.EurekaServerApplication.executor": "Run",
     "Spring Boot.IdentityServiceApplication.executor": "Run",
     "Spring Boot.OrderServiceApplication.executor": "Run",
     "Spring Boot.ProductServiceApplication.executor": "Run",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/21128771_DangMinhPhuong_KTPM/Week06",
+    "last_opened_file_path": "D:/21128771_DangMinhPhuong_KTPM/MicroserviceSharedCommon",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -230,6 +92,12 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="iuh.fit.se.orderservice.dto" />
+      <recent name="iuh.fit.se.orderservice.configs" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -240,7 +108,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+  <component name="RunManager" selected="Docker.rabbitmq-server: Compose Deployment">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="iuh.fit.se.apigateway.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -276,6 +144,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EmailServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="email-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="iuh.fit.se.emailservice.EmailServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="eureka-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="iuh.fit.se.eurekaserver.EurekaServerApplication" />
@@ -306,8 +181,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rabbitmq-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="rabbitmq-server/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.ApiGatewayApplication" />
+      <item itemvalue="Docker.rabbitmq-server: Compose Deployment" />
+      <item itemvalue="Spring Boot.EmailServiceApplication" />
       <item itemvalue="Spring Boot.CustomerServiceApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.IdentityServiceApplication" />
@@ -317,6 +206,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.rabbitmq-server: Compose Deployment" />
         <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
       </list>
@@ -344,7 +234,7 @@
       <workItem from="1744113777296" duration="2777000" />
       <workItem from="1744121365780" duration="1073000" />
       <workItem from="1744215030913" duration="646000" />
-      <workItem from="1744253507440" duration="6338000" />
+      <workItem from="1744253507440" duration="9778000" />
     </task>
     <servers />
   </component>
