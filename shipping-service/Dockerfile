@@ -10,6 +10,6 @@ COPY src ./src
 
 RUN ./mvnw package -DskipTests
 
-EXPOSE 8084
+EXPOSE 8088
 
-CMD ["java", "-jar", "/app/target/payment-service-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/app/target/shipping-service-0.0.1-SNAPSHOT.jar"]

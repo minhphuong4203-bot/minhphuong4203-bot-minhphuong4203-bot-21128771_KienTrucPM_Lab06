@@ -1,13 +1,15 @@
-# Dockerfile for inventory-service
-FROM openjdk:21-jdk-slim as build
-WORKDIR /app
-COPY pom.xml .
-RUN mvn dependency:go-offline
-COPY src ./src
-RUN mvn clean package -DskipTests
+FROM eclipse-temurin:17-jdk-alpine
 
-FROM openjdk:21-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/inventory-service-*.jar inventory-service.jar
-EXPOSE 8086
-ENTRYPOINT ["java", "-jar", "inventory-service.jar"]
+
+COPY .mvn/ .mvn
+COPY mvnw pom.xml ./
+RUN ./mvnw dependency:go-offline
+
+COPY src ./src
+
+RUN ./mvnw package -DskipTests
+
+EXPOSE 8087
+
+CMD ["java", "-jar", "/app/target/inventory-service-0.0.1-SNAPSHOT.jar"]
