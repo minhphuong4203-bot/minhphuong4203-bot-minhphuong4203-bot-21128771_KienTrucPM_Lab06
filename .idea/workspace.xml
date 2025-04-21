@@ -25,7 +25,15 @@
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/SingletonSerializedTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/StaticBlockSingleton.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/ThreadSafeSingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/configs/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/filters/JWTGlobalFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/filters/JWTGlobalFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/iuh/fit/se/productservice/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/iuh/fit/se/productservice/configs/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +165,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="inventory-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="iuh.fit.se.inventoryservice.InventoryServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="order-service" />
@@ -165,10 +181,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PaymentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="payment-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="iuh.fit.se.paymentservice.PaymentServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="product-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="iuh.fit.se.productservice.ProductServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShippingServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="shipping-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="iuh.fit.se.shippingservice.ShippingServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -190,6 +222,9 @@
     <list>
       <item itemvalue="Application.ApiGatewayApplication" />
       <item itemvalue="Docker.rabbitmq-server: Compose Deployment" />
+      <item itemvalue="Spring Boot.InventoryServiceApplication" />
+      <item itemvalue="Spring Boot.PaymentServiceApplication" />
+      <item itemvalue="Spring Boot.ShippingServiceApplication" />
       <item itemvalue="Spring Boot.CustomerServiceApplication" />
       <item itemvalue="Spring Boot.EmailServiceApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
@@ -234,7 +269,8 @@
       <workItem from="1744358011768" duration="2000" />
       <workItem from="1744794460994" duration="13000" />
       <workItem from="1744812202552" duration="37000" />
-      <workItem from="1745206128651" duration="594000" />
+      <workItem from="1745206128651" duration="4862000" />
+      <workItem from="1745244578210" duration="1379000" />
     </task>
     <servers />
   </component>
