@@ -21,7 +21,7 @@ public class SecurityConfig {
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) throws Exception {
         http.csrf(csrfSpec -> csrfSpec.disable())
                 .authorizeExchange(authorizeExchangeSpec -> authorizeExchangeSpec
-                        .pathMatchers("/products/**", "/orders/**", "/customers/**").authenticated()
+                        .pathMatchers("/products/**", "/orders/**", "/customers/**", "/api/payments/**").authenticated()
                         .anyExchange().permitAll()
                 )
                 .addFilterBefore(new JWTGlobalFilter(), SecurityWebFiltersOrder.AUTHENTICATION);

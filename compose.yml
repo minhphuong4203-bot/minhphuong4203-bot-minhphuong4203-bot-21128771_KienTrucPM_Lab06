@@ -118,6 +118,35 @@ services:
     networks:
       - your-network
 
+  payment-service:
+    build:
+      context: ./payment-service
+    ports:
+      - "8086:8084"
+    depends_on:
+      - eureka-server
+      - rabbitmq-server
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_RABBITMQ_HOST=rabbitmq-server
+      - SPRING_RABBITMQ_PORT=5672
+      - SPRING_RABBITMQ_USERNAME=guest
+      - SPRING_RABBITMQ_PASSWORD=guest
+    networks:
+      - your-network
+
+  rabbitmq-server:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    networks:
+      - your-network
+
 volumes:
   mysql-data:
 
