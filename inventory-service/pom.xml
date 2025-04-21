@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>iuh.fit.se</groupId>
-	<artifactId>payment-service</artifactId>
+	<artifactId>inventory-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>payment-service</name>
-	<description>payment-service</description>
+	<name>inventory-service</name>
+	<description>inventory-service</description>
 	<url/>
 	<licenses>
 		<license/>

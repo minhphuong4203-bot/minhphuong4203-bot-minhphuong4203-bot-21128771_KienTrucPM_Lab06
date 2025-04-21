@@ -1,4 +1,4 @@
-# Dockerfile for payment-service
+# Dockerfile for inventory-service
 FROM openjdk:21-jdk-slim as build
 WORKDIR /app
 COPY pom.xml .
@@ -8,6 +8,6 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:21-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/payment-service-*.jar payment-service.jar
-EXPOSE 8084
-ENTRYPOINT ["java", "-jar", "payment-service.jar"]
+COPY --from=build /app/target/inventory-service-*.jar inventory-service.jar
+EXPOSE 8086
+ENTRYPOINT ["java", "-jar", "inventory-service.jar"]

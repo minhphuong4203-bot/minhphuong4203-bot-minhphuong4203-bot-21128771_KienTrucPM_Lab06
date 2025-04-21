@@ -136,6 +136,42 @@ services:
     networks:
       - your-network
 
+  inventory-service:
+    build:
+      context: ./inventory-service
+    ports:
+      - "8087:8087"
+    depends_on:
+      - eureka-server
+      - rabbitmq-server
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_RABBITMQ_HOST=rabbitmq-server
+      - SPRING_RABBITMQ_PORT=5672
+      - SPRING_RABBITMQ_USERNAME=guest
+      - SPRING_RABBITMQ_PASSWORD=guest
+    networks:
+      - your-network
+
+  shipping-service:
+    build:
+      context: ./shipping-service
+    ports:
+      - "8088:8088"
+    depends_on:
+      - eureka-server
+      - rabbitmq-server
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_RABBITMQ_HOST=rabbitmq-server
+      - SPRING_RABBITMQ_PORT=5672
+      - SPRING_RABBITMQ_USERNAME=guest
+      - SPRING_RABBITMQ_PASSWORD=guest
+    networks:
+      - your-network
+
   rabbitmq-server:
     image: rabbitmq:3-management-alpine
     ports:
