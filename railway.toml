@@ -1,2 +1,4 @@
 [build]
+builder = "nixpacks"
+# Specify which directory to build
 directory = "identity-service"
