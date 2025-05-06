@@ -7,9 +7,10 @@ on:
     paths:
       - 'identity-service/**'  # Only trigger when changes are in the identity-service directory
       - 'railway.toml'
+      - '.github/workflows/deploy-identity-service.yml'
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       # Step 1: Checkout the code
@@ -24,25 +25,24 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      # Step 3: Install Railway CLI
+      # Step 3: Build with Maven
+      - name: Build with Maven
+        run: mvn -B package -f identity-service/pom.xml --file identity-service/pom.xml -DskipTests
+
+      # Step 4: Install Railway CLI
       - name: Install Railway CLI
         run: |
           curl -fsSL https://railway.app/install.sh | sh
 
-      # Step 4: Login to Railway
+      # Step 5: Login to Railway
       - name: Login to Railway
         run: |
           railway login --token ${{ secrets.RAILWAY_TOKEN }}
 
-      # Step 5: Deploy to Railway
+      # Step 6: Deploy to Railway
       - name: Deploy Identity Service to Railway
         working-directory: identity-service
         run: |
-          railway up --service identity-service
+          railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-
-      # Step 6: Verify Deployment
-      - name: Verify Deployment
-        run: |
-          echo "Identity Service deployed to Railway successfully!"
