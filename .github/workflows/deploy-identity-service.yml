@@ -47,4 +47,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Deploy to Railway
-        run: railway up --service=identity-service
+        run: railway up --service=grateful-patience
