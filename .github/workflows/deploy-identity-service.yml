@@ -3,11 +3,11 @@ name: Deploy Identity Service to Railway
 on:
   push:
     branches:
-      - main  # Trigger when commits are pushed to the main branch
+      - main # Trigger when commits are pushed to the main branch
     paths:
-      - 'identity-service/**'  # Only trigger when changes are in the identity-service directory
-      - 'railway.toml'
-      - '.github/workflows/deploy-identity-service.yml'
+      - "identity-service/**" # Only trigger when changes are in the identity-service directory
+      - "railway.toml"
+      - ".github/workflows/deploy-identity-service.yml"
 
 jobs:
   build-and-deploy:
@@ -21,8 +21,8 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
-          distribution: 'temurin'
+          java-version: "17"
+          distribution: "temurin"
           cache: maven
 
       # Step 3: Build with Maven
@@ -34,14 +34,7 @@ jobs:
         run: |
           curl -fsSL https://railway.app/install.sh | sh
 
-      # Step 5: Login to Railway using environment variable with -y flag for non-interactive mode
-      - name: Login to Railway
-        run: |
-          echo "${{ secrets.RAILWAY_TOKEN }}" | railway login -y
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-
-      # Step 6: Deploy to Railway
+      # Step 5: Deploy to Railway
       - name: Deploy Identity Service to Railway
         run: |
           cd identity-service
