@@ -9,32 +9,7 @@ on:
       - '.github/workflows/deploy-identity-service.yml'
 
 jobs:
-  # Build job to compile the Java application
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Java
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-          cache: maven
-
-      - name: Build with Maven
-        run: mvn -B package -f identity-service/pom.xml --file identity-service/pom.xml -DskipTests
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: identity-service-jar
-          path: identity-service/target/*.jar
-
-  # Deploy job using Railway's official container
   deploy:
-    needs: build
     runs-on: ubuntu-latest
     container: ghcr.io/railwayapp/cli:latest
     env:
@@ -43,10 +18,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         
-      - name: Deploy to Railway (create new service)
+      - name: Check Railway CLI version
+        run: railway --version
+        
+      - name: Deploy identity-service to Railway
         run: |
-          railway project
-          # Tạo dịch vụ mới từ thư mục identity-service
+          # Change to identity-service directory first
           cd identity-service
-          railway service
+          # Deploy using current directory
+          railway init --name="identity-service"
           railway up
