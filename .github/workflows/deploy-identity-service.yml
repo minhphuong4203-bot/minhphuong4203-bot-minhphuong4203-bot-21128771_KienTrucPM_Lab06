@@ -34,9 +34,23 @@ jobs:
           cp identity-service/target/*.jar railway-deploy/app.jar
           echo "web: java -Dserver.port=\$PORT -jar app.jar" > railway-deploy/Procfile
 
-      - name: Deploy using official Railway GitHub Action
-        uses: bervProject/railway-deploy@main
-        with:
-          railway_token: ${{ secrets.RAILWAY_TOKEN }}
-          service: "identity-service"
-          root_directory: "railway-deploy"
+      # Manual deploy using the Railway CLI
+      - name: Install Railway CLI
+        run: npm i -g @railway/cli
+
+      - name: Deploy to Railway
+        working-directory: railway-deploy
+        run: |
+          # Create a token file for authentication
+          echo "${{ secrets.RAILWAY_TOKEN }}" > railway-token.txt
+          export RAILWAY_TOKEN=$(cat railway-token.txt)
+          
+          # Verify token is set
+          echo "Attempting Railway login..."
+          railway whoami
+          
+          # Deploy to Railway
+          echo "Deploying to Railway..."
+          railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
