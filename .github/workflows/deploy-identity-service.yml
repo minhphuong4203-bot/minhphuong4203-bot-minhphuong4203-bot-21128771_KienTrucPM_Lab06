@@ -5,46 +5,34 @@ on:
     branches:
       - main
     paths:
-      - "identity-service/**"
-      - "railway.toml"
-      - ".github/workflows/deploy-identity-service.yml"
+      - 'identity-service/**'
+      - '.github/workflows/deploy-identity-service.yml'
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./identity-service
+    
     steps:
-      # Step 1: Checkout the code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Set up Java
-      - name: Set up Java
+      - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
-          java-version: "17"
-          distribution: "temurin"
+          java-version: '17'
+          distribution: 'temurin'
           cache: maven
 
-      # Step 3: Build with Maven
       - name: Build with Maven
-        run: mvn -B package -f identity-service/pom.xml --file identity-service/pom.xml -DskipTests
-
-      # Step 4: Upload artifact
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: identity-service-jar
-          path: identity-service/target/*.jar
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    container: ghcr.io/railwayapp/cli:latest
-    env:
-      RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
+        run: ./mvnw package -DskipTests
+      
+      - name: Install Railway CLI
+        run: npm install -g @railway/cli
+      
       - name: Deploy to Railway
-        run: railway up --service=grateful-patience
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: railway up --detach

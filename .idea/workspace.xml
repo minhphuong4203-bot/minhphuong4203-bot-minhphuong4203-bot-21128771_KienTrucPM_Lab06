@@ -25,49 +25,8 @@
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/SingletonSerializedTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/StaticBlockSingleton.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/ThreadSafeSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/HELP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/configs/RouteConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/configs/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/exceptions/AuthenticationExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/filters/JWTGlobalFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/filters/JWTGlobalFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/utils/JWTUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/iuh/fit/se/apigateway/configs/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/iuh/fit/se/apigateway/configs/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/iuh/fit/se/apigateway/filters/JWTGlobalFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/iuh/fit/se/apigateway/filters/JWTGlobalFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/surefire-reports/TEST-iuh.fit.se.apigateway.ApiGatewayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/surefire-reports/TEST-iuh.fit.se.apigateway.ApiGatewayApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/surefire-reports/iuh.fit.se.apigateway.ApiGatewayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/surefire-reports/iuh.fit.se.apigateway.ApiGatewayApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/HELP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/iuh/fit/se/identityservice/filters/JWTAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy-identity-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy-identity-service.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/identity-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/src/test/java/iuh/fit/se/identityservice/IdentityServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/src/test/java/iuh/fit/se/identityservice/IdentityServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,7 +289,7 @@
       <workItem from="1745244578210" duration="1379000" />
       <workItem from="1745294278881" duration="611000" />
       <workItem from="1745320714582" duration="12000" />
-      <workItem from="1746516307342" duration="6218000" />
+      <workItem from="1746516307342" duration="6887000" />
     </task>
     <servers />
   </component>
