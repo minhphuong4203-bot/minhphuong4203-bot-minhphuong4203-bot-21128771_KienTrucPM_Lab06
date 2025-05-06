@@ -1,19 +1,19 @@
-FROM eclipse-temurin:17-jdk-alpine AS build
-WORKDIR /workspace/app
+FROM eclipse-temurin:17-jdk-alpine
+WORKDIR /app
 
-COPY mvnw .
-COPY .mvn .mvn
+# Copy Maven wrapper and pom.xml
 COPY pom.xml .
-COPY src src
+COPY mvnw .
+COPY .mvn/ .mvn/
 
+# Make Maven wrapper executable
 RUN chmod +x ./mvnw
-RUN ./mvnw install -DskipTests
-RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
 
-FROM eclipse-temurin:17-jre-alpine
-# Removed VOLUME instruction as it's not allowed on Railway
-ARG DEPENDENCY=/workspace/app/target/dependency
-COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib
-COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
-COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
-ENTRYPOINT ["java","-cp","app:app/lib/*","iuh.fit.se.identityservice.IdentityServiceApplication"]
+# Copy source code
+COPY src/ src/
+
+# Build application
+RUN ./mvnw package -DskipTests
+
+# Run application
+ENTRYPOINT ["java", "-jar", "target/identity-service-0.0.1-SNAPSHOT.jar"]
