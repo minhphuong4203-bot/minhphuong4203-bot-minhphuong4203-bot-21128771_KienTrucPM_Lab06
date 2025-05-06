@@ -1,4 +1,11 @@
 [build]
-directory
-=
-identity-service
+builder = "DOCKERFILE"
+dockerfilePath = "identity-service/Dockerfile"
+buildPath = "identity-service"
+
+[deploy]
+numReplicas = 1
+healthcheckPath = "/actuator/health"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
