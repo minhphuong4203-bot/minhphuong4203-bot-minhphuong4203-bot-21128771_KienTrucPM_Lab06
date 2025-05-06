@@ -42,5 +42,9 @@ jobs:
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: |
-          railway link --environment production --project ${{ secrets.RAILWAY_PROJECT_ID }}
+          # Debug the project ID 
+          echo "Linking to Railway project"
+          railway link --environment production --project="${{ secrets.RAILWAY_PROJECT_ID }}"
+          
+          echo "Deploying to Railway"
           railway up
