@@ -1,6 +1,7 @@
 [build]
 builder = "DOCKERFILE"
 dockerfilePath = "identity-service/Dockerfile"
+buildPath = "identity-service"
 
 [deploy]
 numReplicas = 1
