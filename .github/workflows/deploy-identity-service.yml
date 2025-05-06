@@ -34,17 +34,17 @@ jobs:
         run: |
           curl -fsSL https://railway.app/install.sh | sh
 
-      # Step 5: Login to Railway using environment variable
+      # Step 5: Login to Railway using environment variable with -y flag for non-interactive mode
       - name: Login to Railway
         run: |
-          railway login
+          echo "${{ secrets.RAILWAY_TOKEN }}" | railway login -y
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 
       # Step 6: Deploy to Railway
       - name: Deploy Identity Service to Railway
-        working-directory: identity-service
         run: |
-          railway up
+          cd identity-service
+          railway up --service identity-service -y
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
