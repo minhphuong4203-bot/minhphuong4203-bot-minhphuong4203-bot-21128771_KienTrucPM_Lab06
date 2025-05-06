@@ -2,24 +2,49 @@ name: Deploy Identity Service to Railway
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
       - 'identity-service/**'
       - 'railway.toml'
       - '.github/workflows/deploy-identity-service.yml'
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout the code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Simplified approach using curl to trigger Railway deployment
-      - name: Trigger Railway Deployment
-        run: |
-          curl -X POST \
-            -H "Content-Type: application/json" \
-            -H "Authorization: Bearer ${{ secrets.RAILWAY_TOKEN }}" \
-            "https://backboard.railway.app/api/projects/${{ secrets.RAILWAY_PROJECT_ID }}/deploy" \
-            -d '{}'
+      # Step 2: Set up Java
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      # Step 3: Build with Maven
+      - name: Build with Maven
+        run: mvn -B package -f identity-service/pom.xml --file identity-service/pom.xml -DskipTests
+
+      # Step 4: Upload artifact
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: identity-service-jar
+          path: identity-service/target/*.jar
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    container: ghcr.io/railwayapp/cli:latest
+    env:
+      RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Deploy to Railway
+        run: railway up --service=identity-service
