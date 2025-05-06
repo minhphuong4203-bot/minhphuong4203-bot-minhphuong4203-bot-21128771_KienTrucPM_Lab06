@@ -11,6 +11,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    container: ghcr.io/railwayapp/cli:latest
+    env:
+      RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 
     steps:
       - name: Checkout code
@@ -19,7 +22,7 @@ jobs:
       - name: List files in identity-service
         run: ls -la identity-service/
 
-      - name: Set up JDK 17
+      - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           java-version: "17"
@@ -30,24 +33,18 @@ jobs:
         working-directory: ./identity-service
         run: ./mvnw package -DskipTests
 
-      - name: Create deployment package
+      - name: Create simple deployment
         run: |
           mkdir -p deployment
           cp identity-service/target/*.jar deployment/app.jar
-          cat > deployment/Dockerfile << 'EOL'
-          FROM eclipse-temurin:17-jre-alpine
-          WORKDIR /app
-          COPY app.jar app.jar
-          ENTRYPOINT ["java", "-jar", "app.jar"]
-          EOL
-          ls -la deployment/
-
-      - name: Install Railway CLI
-        run: npm install -g @railway/cli
-
-      - name: Deploy to Railway
-        working-directory: ./deployment
+        
+      # Deploy using Railway CLI container
+      - name: Link Railway Project
+        run: railway link --project ce5752c9-116d-40a3-81bc-bee7acfa7f0c
+        
+      # Set the Spring profile to railway and deploy
+      - name: Deploy JAR directly
         run: |
+          cd deployment
+          railway variables set SPRING_PROFILES_ACTIVE=railway
           railway up --service identity-service --detach
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}

@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: identity-service
+
+# Completely disable Eureka client
+eureka:
+  client:
+    enabled: false
+    register-with-eureka: false
+    fetch-registry: false
+
+# Database connection
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:mysql://maglev.proxy.rlwy.net:20933/railway}
+    username: ${MYSQLUSER:root}
+    password: ${MYSQLPASSWORD:OResBsSjGjxYMKPoLPlKjQZaqmFeMRYd}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# Server configuration
+server:
+  port: ${PORT:8081}
