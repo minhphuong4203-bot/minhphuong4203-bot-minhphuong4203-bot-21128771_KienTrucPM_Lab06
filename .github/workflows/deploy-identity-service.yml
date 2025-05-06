@@ -11,20 +11,21 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    container: ghcr.io/railwayapp/cli:latest
-    env:
-      RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         
-      - name: Check Railway CLI version
-        run: railway --version
+      - name: Install Railway CLI
+        run: curl -fsSL https://railway.app/install.sh | sh
         
-      - name: Deploy identity-service to Railway
+      - name: Login to Railway
         run: |
-          # Change to identity-service directory first
+          echo "${{ secrets.RAILWAY_TOKEN }}" | railway login --browserless
+        
+      - name: Deploy to Railway
+        run: |
           cd identity-service
-          # Deploy using current directory
-          railway init --name="identity-service"
+          railway link --environment production
           railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
