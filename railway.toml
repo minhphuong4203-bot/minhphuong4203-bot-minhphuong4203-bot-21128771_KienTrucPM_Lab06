@@ -1,11 +1,2 @@
 [build]
-builder = "nixpacks"
-buildCommand = "cd identity-service && ./mvnw package -DskipTests"
-nixpacksConfigPath = "identity-service/nixpacks.toml"
-# Specify which directory to build
 directory = "identity-service"
-
-[deploy]
-startCommand = "cd identity-service && java -jar target/identity-service-0.0.1-SNAPSHOT.jar"
-healthcheckPath = "/actuator/health"
-healthcheckTimeout = 300
