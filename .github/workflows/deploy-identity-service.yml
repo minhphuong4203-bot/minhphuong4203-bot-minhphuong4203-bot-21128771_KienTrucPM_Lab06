@@ -2,21 +2,21 @@ name: Deploy Identity Service to Railway
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - 'identity-service/**'
       - 'railway.toml'
       - '.github/workflows/deploy-identity-service.yml'
 
 jobs:
-  deploy:
+  # Build job to compile the Java application
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up JDK 17
+      - name: Set up Java
         uses: actions/setup-java@v3
         with:
           java-version: '17'
@@ -27,17 +27,22 @@ jobs:
         run: mvn -B package -f identity-service/pom.xml --file identity-service/pom.xml -DskipTests
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: identity-service-jar
           path: identity-service/target/*.jar
 
-      - name: Install Railway CLI
-        run: npm i -g @railway/cli
-
+  # Deploy job using Railway's official container
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    container: ghcr.io/railwayapp/cli:latest
+    env:
+      RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
       - name: Deploy to Railway
-        uses: railway/railway-cli-action@v1
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        with:
-          command: up --service identity-service
+        run: railway up
+        # Note: The railway.toml file in your repo will specify which directory to deploy
