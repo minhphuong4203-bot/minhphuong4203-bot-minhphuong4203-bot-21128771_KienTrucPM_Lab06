@@ -11,14 +11,11 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Debug step to check files
       - name: List files in identity-service
         run: ls -la identity-service/
 
@@ -37,20 +34,25 @@ jobs:
         run: |
           mkdir -p deployment
           cp identity-service/target/*.jar deployment/app.jar
-          cat <<EOF > deployment/Dockerfile
+          cat > deployment/Dockerfile << 'EOL'
           FROM eclipse-temurin:17-jre-alpine
           WORKDIR /app
           COPY app.jar app.jar
           ENTRYPOINT ["java", "-jar", "app.jar"]
-          EOF
+          EOL
           ls -la deployment/
-          echo "Deployment package created successfully."
 
-      # Install and use railway-deploy GitHub Action
+      - name: Install Railway CLI
+        run: npm install -g @railway/cli
+
+      - name: Link Railway Project
+        working-directory: ./deployment
+        run: railway link --project ce5752c9-116d-40a3-81bc-bee7acfa7f0c
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
       - name: Deploy to Railway
-        uses: devtomio/action-railway@v1.2.0
-        with:
-          railway_token: ${{ secrets.RAILWAY_TOKEN }}
-          service: identity-service
-          directory: ./deployment
-          detach: true
+        working-directory: ./deployment
+        run: railway up --service identity-service --detach
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
