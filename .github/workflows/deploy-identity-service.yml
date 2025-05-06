@@ -43,5 +43,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         
-      - name: Deploy to Railway
-        run: railway up --service identity-service
+      - name: Deploy to Railway (create new service)
+        run: |
+          railway project
+          # Tạo dịch vụ mới từ thư mục identity-service
+          cd identity-service
+          railway service
+          railway up
