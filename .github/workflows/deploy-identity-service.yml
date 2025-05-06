@@ -25,8 +25,24 @@ jobs:
       - name: Build with Maven
         run: mvn -B package -f identity-service/pom.xml --file identity-service/pom.xml -DskipTests
 
-      - name: Deploy directly to Railway
-        uses: railwayapp/railway-github-action@v1.0.0
-        with:
-          railway_token: ${{ secrets.RAILWAY_TOKEN }}
-          workdir: identity-service
+      - name: Setup Railway CLI
+        run: |
+          # Install Railway CLI via NPM
+          npm install -g @railway/cli
+          
+          # Debug environment
+          echo "Current directory: $(pwd)"
+          ls -la
+          ls -la identity-service/
+
+      - name: Create .railwayrc file
+        run: |
+          # Create a .railwayrc file with the token
+          echo "{\"token\":\"${{ secrets.RAILWAY_TOKEN }}\"}" > $HOME/.railwayrc
+          chmod 600 $HOME/.railwayrc
+          
+      - name: Deploy to Railway
+        run: |
+          cd identity-service
+          # Try to deploy using Railway CLI with explicit service name
+          railway up
