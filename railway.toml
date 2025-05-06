@@ -1,2 +1,11 @@
 [build]
-directory = "identity-service"
+builder = "nixpacks"
+buildCommand = "cd identity-service && ./mvnw package -DskipTests"
+watchPatterns = ["identity-service/**"]
+
+[deploy]
+startCommand = "cd identity-service && java -jar target/*.jar"
+restartPolicyType = "ON_FAILURE"
+
+[variables]
+NIXPACKS_JAVA_VERSION = "17"

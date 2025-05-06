@@ -12,37 +12,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-          cache: maven
-
-      - name: Build with Maven
-        run: mvn -B package -f identity-service/pom.xml --file identity-service/pom.xml -DskipTests
-
-      - name: Setup Railway CLI
+      # Simplified approach using curl to trigger Railway deployment
+      - name: Trigger Railway Deployment
         run: |
-          # Install Railway CLI via NPM
-          npm install -g @railway/cli
-          
-          # Debug environment
-          echo "Current directory: $(pwd)"
-          ls -la
-          ls -la identity-service/
-
-      - name: Create .railwayrc file
-        run: |
-          # Create a .railwayrc file with the token
-          echo "{\"token\":\"${{ secrets.RAILWAY_TOKEN }}\"}" > $HOME/.railwayrc
-          chmod 600 $HOME/.railwayrc
-          
-      - name: Deploy to Railway
-        run: |
-          cd identity-service
-          # Try to deploy using Railway CLI with explicit service name
-          railway up
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ secrets.RAILWAY_TOKEN }}" \
+            "https://backboard.railway.app/api/projects/${{ secrets.RAILWAY_PROJECT_ID }}/deploy" \
+            -d '{}'
