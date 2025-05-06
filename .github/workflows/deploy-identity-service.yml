@@ -31,6 +31,11 @@ jobs:
       - name: Deploy to Railway
         run: |
           cd identity-service
+          # First create a new service if it doesn't exist
+          railway service create identity-service || echo "Service might already exist"
+          # Link to the service
+          railway link --service identity-service
+          # Deploy to the linked service
           railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
