@@ -25,8 +25,6 @@
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/SingletonSerializedTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/StaticBlockSingleton.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/ThreadSafeSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy-identity-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy-identity-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +287,7 @@
       <workItem from="1745244578210" duration="1379000" />
       <workItem from="1745294278881" duration="611000" />
       <workItem from="1745320714582" duration="12000" />
-      <workItem from="1746516307342" duration="6887000" />
+      <workItem from="1746516307342" duration="7600000" />
     </task>
     <servers />
   </component>
