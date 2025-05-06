@@ -1,72 +1,118 @@
 package iuh.fit.se.apigateway.filters;
 
-import iuh.fit.se.apigateway.utils.JWTUtil;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.gateway.filter.GatewayFilterChain;
-import org.springframework.cloud.gateway.filter.GlobalFilter;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
+import io.jsonwebtoken.Jwts;
 import org.springframework.core.Ordered;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.context.ReactiveSecurityContextHolder;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
+import org.springframework.web.server.WebFilter;
+import org.springframework.web.server.WebFilterChain;
 import reactor.core.publisher.Mono;
 
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Component
-public class JWTGlobalFilter implements GlobalFilter, Ordered {
+@Order(Ordered.HIGHEST_PRECEDENCE)
+public class JWTGlobalFilter implements WebFilter {
 
-    @Autowired
-    private JWTUtil jwtUtil;
-    
+    private static final String SECRET_KEY = "6d7f6e6f4f3a9f97f2616c740213adf6a3acfb9f5b7178ab8f12f5d531e98d3a";
+
+    private String extractJwtFromRequest(ServerWebExchange exchange) {
+        String bearerToken = exchange.getRequest().getHeaders().getFirst("Authorization");
+        if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
+            return bearerToken.substring(7);
+        }
+        return null;
+    }
+
+    private Claims extractClaims(String token) {
+        try {
+            return Jwts.parser()
+                    .setSigningKey(SECRET_KEY)
+                    .build()
+                    .parseSignedClaims(token)
+                    .getPayload();
+        }
+        catch (JwtException e) {
+            return null;
+        }
+    }
+
     @Override
-    public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        ServerHttpRequest request = exchange.getRequest();
-        String path = request.getURI().getPath();
-        
-        // Allow public endpoints without authentication
-        if (path.contains("/auth/login") || path.contains("/auth/register")) {
+    public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
+
+        System.out.println(exchange.getRequest().getURI());
+        if (exchange.getRequest().getURI().toString().contains("/auth/login") ||
+                exchange.getRequest().getURI().toString().contains("/auth/register")) {
+
             return chain.filter(exchange);
         }
-        
-        // Get authorization header
-        String authHeader = request.getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
-        
-        // Check if the token exists and is valid
-        if (authHeader != null && authHeader.startsWith("Bearer ")) {
-            String token = authHeader.substring(7);
-            
-            if (jwtUtil.validateToken(token)) {
-                // Extract user information and roles from the token
-                String username = jwtUtil.extractUsername(token);
-                List<SimpleGrantedAuthority> authorities = jwtUtil.extractRoles(token);
-                
-                // Create authentication token
-                UsernamePasswordAuthenticationToken authToken = 
-                    new UsernamePasswordAuthenticationToken(username, null, authorities);
-                
-                // Forward the token to downstream services
-                ServerHttpRequest modifiedRequest = request.mutate()
-                    .header(HttpHeaders.AUTHORIZATION, authHeader)
-                    .build();
-                
-                // Set security context
-                return chain.filter(exchange.mutate().request(modifiedRequest).build())
-                    .contextWrite(ReactiveSecurityContextHolder.withAuthentication(authToken));
-            }
+
+        // Extract token from request
+        String token = extractJwtFromRequest(exchange);
+
+        // Extract claims from the token
+        Claims claims = extractClaims(token);
+        System.out.println(claims);
+
+        // Validate token
+        if (token == null || claims == null) {
+            return Mono.error(new JwtException("Invalid or missing JWT token"));
         }
-        
-        // Authentication failed - return 401 Unauthorized
-        exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
-        return exchange.getResponse().setComplete();
-    }
-    
-    @Override
-    public int getOrder() {
-        return -100; // High precedence to ensure authentication happens early
+
+        // Create authorities list from claims
+        List<SimpleGrantedAuthority> authorities = extractAuthoritiesFromClaims(claims);
+
+        // Create an Authentication object
+        Authentication authentication = new UsernamePasswordAuthenticationToken(
+                claims.getSubject(), null, authorities
+        );
+
+        System.out.println(authentication);
+
+        // Create an empty SecurityContext and set the authentication object
+        SecurityContext securityContext = SecurityContextHolder.createEmptyContext();
+        securityContext.setAuthentication(authentication);
+        SecurityContextHolder.setContext(securityContext);
+
+        // Set token to header
+        exchange.getRequest().mutate().header("Authorization", "Bearer " + token);
+
+        // Save the SecurityContext in the session using SecurityContextRepository
+        return exchange.getSession()
+                .flatMap(session -> {
+                    session.getAttributes().put("SPRING_SECURITY_CONTEXT", securityContext);
+                    return chain.filter(exchange);
+                });
+   }
+
+    private List<SimpleGrantedAuthority> extractAuthoritiesFromClaims(Claims claims) {
+        Object rolesObject = claims.get("roles");
+
+        if (rolesObject instanceof List) {
+            List<String> roles = ((List<?>) rolesObject).stream()
+                    .filter(item -> item instanceof Map)
+                    .map(item -> ((Map<?, ?>) item).get("authority"))
+                    .filter(Objects::nonNull)
+                    .map(Object::toString)
+                    .collect(Collectors.toList());
+
+            System.out.println(roles);
+
+            return roles.stream()
+                    .map(SimpleGrantedAuthority::new)
+                    .collect(Collectors.toList());
+        } else {
+            System.out.println("Roles are not in the expected format");
+            return Collections.emptyList();
+        }
     }
 }

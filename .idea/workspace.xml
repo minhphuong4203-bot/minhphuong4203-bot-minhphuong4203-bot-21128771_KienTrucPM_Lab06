@@ -26,14 +26,48 @@
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/StaticBlockSingleton.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SingleTon/src/iuh/fit/se/singleton/ThreadSafeSingleton.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/HELP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/mvnw.cmd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/configs/RouteConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/configs/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/exceptions/AuthenticationExceptionHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/filters/JWTGlobalFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/filters/JWTGlobalFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/iuh/fit/se/apigateway/utils/JWTUtil.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/iuh/fit/se/productservice/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/iuh/fit/se/productservice/configs/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/iuh/fit/se/apigateway/configs/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/iuh/fit/se/apigateway/configs/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/iuh/fit/se/apigateway/filters/JWTGlobalFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/iuh/fit/se/apigateway/filters/JWTGlobalFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/surefire-reports/TEST-iuh.fit.se.apigateway.ApiGatewayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/surefire-reports/TEST-iuh.fit.se.apigateway.ApiGatewayApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/surefire-reports/iuh.fit.se.apigateway.ApiGatewayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/surefire-reports/iuh.fit.se.apigateway.ApiGatewayApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/HELP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/iuh/fit/se/identityservice/filters/JWTAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/test/java/iuh/fit/se/identityservice/IdentityServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/src/test/java/iuh/fit/se/identityservice/IdentityServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +92,11 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.IdentityServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Docker.rabbitmq-server: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in eureka-server.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in identity-service.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -81,9 +119,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;application.passwordSafe&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -108,13 +146,13 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.rabbitmq-server: Compose Deployment">
-    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="iuh.fit.se.apigateway.ApiGatewayApplication" />
-      <module name="api-gateway" />
+  <component name="RunManager" selected="Spring Boot.IdentityServiceApplication">
+    <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="iuh.fit.se.eurekaserver.EurekaServerApplication" />
+      <module name="eureka-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="iuh.fit.se.apigateway.*" />
+          <option name="PATTERN" value="iuh.fit.se.eurekaserver.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,16 +160,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="api-gateway" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="iuh.fit.se.apigateway.ApiGatewayApplication" />
+    <configuration name="IdentityServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="iuh.fit.se.identityservice.IdentityServiceApplication" />
+      <module name="identity-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="iuh.fit.se.apigateway.*" />
+          <option name="PATTERN" value="iuh.fit.se.identityservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in eureka-server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eureka-server" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in identity-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="identity-service" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -220,24 +273,28 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.ApiGatewayApplication" />
+      <item itemvalue="Application.EurekaServerApplication" />
+      <item itemvalue="Application.IdentityServiceApplication" />
       <item itemvalue="Docker.rabbitmq-server: Compose Deployment" />
-      <item itemvalue="Spring Boot.InventoryServiceApplication" />
-      <item itemvalue="Spring Boot.PaymentServiceApplication" />
-      <item itemvalue="Spring Boot.ShippingServiceApplication" />
+      <item itemvalue="JUnit.All in eureka-server" />
+      <item itemvalue="JUnit.All in identity-service" />
       <item itemvalue="Spring Boot.CustomerServiceApplication" />
       <item itemvalue="Spring Boot.EmailServiceApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.IdentityServiceApplication" />
+      <item itemvalue="Spring Boot.InventoryServiceApplication" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
+      <item itemvalue="Spring Boot.PaymentServiceApplication" />
       <item itemvalue="Spring Boot.ProductServiceApplication" />
-      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.ShippingServiceApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IdentityServiceApplication" />
+        <item itemvalue="Application.EurekaServerApplication" />
+        <item itemvalue="JUnit.All in eureka-server" />
+        <item itemvalue="JUnit.All in identity-service" />
         <item itemvalue="Docker.rabbitmq-server: Compose Deployment" />
-        <item itemvalue="Spring Boot.ApiGatewayApplication" />
-        <item itemvalue="Application.ApiGatewayApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -271,6 +328,9 @@
       <workItem from="1744812202552" duration="37000" />
       <workItem from="1745206128651" duration="4862000" />
       <workItem from="1745244578210" duration="1379000" />
+      <workItem from="1745294278881" duration="611000" />
+      <workItem from="1745320714582" duration="12000" />
+      <workItem from="1746516307342" duration="6218000" />
     </task>
     <servers />
   </component>
