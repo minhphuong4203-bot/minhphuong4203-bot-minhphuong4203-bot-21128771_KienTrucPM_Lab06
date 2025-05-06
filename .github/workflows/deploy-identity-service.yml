@@ -11,6 +11,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 
     steps:
       - name: Checkout code
@@ -42,23 +44,13 @@ jobs:
           ENTRYPOINT ["java", "-jar", "app.jar"]
           EOF
           ls -la deployment/
-          echo "Deployment package created successfully." 
+          echo "Deployment package created successfully."
 
-      - name: Install Railway CLI
-        run: npm install -g @railway/cli
-
-      - name: Login to Railway
-        run: echo "${{ secrets.RAILWAY_TOKEN }}" | railway login
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-          
-      - name: Link Railway Project
-        run: railway link --project ce5752c9-116d-40a3-81bc-bee7acfa7f0c
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-
+      # Install and use railway-deploy GitHub Action
       - name: Deploy to Railway
-        working-directory: ./deployment
-        run: railway up --service identity-service --detach
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        uses: devtomio/action-railway@v1.2.0
+        with:
+          railway_token: ${{ secrets.RAILWAY_TOKEN }}
+          service: identity-service
+          directory: ./deployment
+          detach: true
